@@ -48,7 +48,7 @@ public class HomeWorkLesson4 {
 
     @BeforeMethod
     @Parameters("browser")
-    public void createDriver(String browser){
+    public void createDriver(@Optional("Chrome") String browser){
         WebDriver driver = null;
         if (browser.equals("Chrome")){
             driver = InitWebDriver.initChromeDriver();
